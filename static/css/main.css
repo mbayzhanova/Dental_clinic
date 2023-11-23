@@ -1,0 +1,268 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+/* @import url("https://github.com/s-a/digital-numbers-font"); */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #000;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    padding-top: 44px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 43px;
+}
+
+/*navigator*/
+
+.logo {
+    max-width: 180px;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 84px;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.nav-item-link {
+    color: #000;
+}
+
+.nav-link {
+    border-radius: 35px;
+    border: 1.50px solid;
+    padding: 15px 25px;
+    color: #000;
+}
+
+.nav-span-link {
+    color: #000;
+}
+
+hr {
+    border: solid 5px #E1DED9;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 74px;
+}
+
+/*header-content*/
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    max-width: 650px;
+}
+
+.header-heading {
+    margin-bottom: 60px;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.header-content p {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 67px;
+}
+
+.span-header {
+    color:#000;
+    background: white; 
+    border-radius: 35px; border: 1.50px solid;
+    padding: 20px 33px;
+    margin-bottom: 20px;
+}
+
+.a-header-link {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* header-sales */
+
+.sales-row {
+    justify-content: center;
+    text-align: center;
+}
+
+.sales-row p {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.sales-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 10px;
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 96px;
+    margin-bottom: 100px;
+    border-radius: 40px; 
+    border: 1px black solid;
+}
+
+.sales-count span {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.sales-count-value {
+    opacity: 0.50;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(225, 222, 217, 0.05) 100%);
+    border-radius: 5px;
+    backdrop-filter: blur(65px);
+    margin: 10px 10px;
+}
+
+.sales-hours {
+    margin: 0 60px;
+}
+
+.sales-days, 
+.sales-minutes {
+    justify-content: center;
+}
+
+/* header-doctor */
+
+.h1-content {
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #E1DED9;
+    text-transform: uppercase;
+}
+
+.doctor-list {
+    display: flex;
+    justify-content: space-between!important;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.doctor-item img {
+    border-radius: 300px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.doctor-item h2 {
+    margin: 28px auto 14px;
+    font-size: 28px;
+}
+
+.doctor-item p {
+    color: rgba(0, 0, 0, 0.79);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Footer */
+
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list-value,
+.footer-list-value a {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.footer-list-value h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.footer-list-value p {
+    max-width: 385px;
+    text-align: justify;
+    font-weight: 200;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.map {
+    width: 270px;
+    height: 200px;
+    background-color: #000;
+    margin: 0 5px;
+}
+
+.footer-list-icon {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+/* Services */
+
+.service-list1,
+.service-list2 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.service-item {
+    background-color: rgba(225, 222, 217, 0.50);
+    border-radius: 20px;
+    padding: 30px 50px;
+    opacity: 1;
+}
+
+.service-item:hover {
+    opacity: 0.6;
+    color: #000;
+}
+
+.service-item img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.service-item__name {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.service-item__price {
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 30px;
+    font-weight: 600;
+}
