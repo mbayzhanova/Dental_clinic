@@ -1,30 +1,16 @@
 from django.contrib import admin
-from .models import Patient, Doctor, Registry, Diagnose, Service, PatientCard, DoctorsEmployment
+from .models import Diagnose, Service, DoctorsSchedule, Order, DayofWeek, WorkingTime
 
-class PatientAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'gender', 'phone_number')
-admin.site.register(Patient, PatientAdmin)
-
-class DoctorAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
-admin.site.register(Doctor, DoctorAdmin)
-
-class RegistryAdmin(admin.ModelAdmin):
-    list_display = ('doctor_id', 'patient_id')
-admin.site.register(Registry, RegistryAdmin)
-
-class DiagnosesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
-admin.site.register(Diagnose, DiagnosesAdmin)
+admin.site.register(Diagnose)
 
 class ServicesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+    list_display = ('name', 'price', 'description', 'img', 'doctor')
 admin.site.register(Service, ServicesAdmin)
 
-class PatientCardAdmin(admin.ModelAdmin):
-    list_display = ('doctor_id', 'patient_id', 'number_of_record', 'dates_of_record')
-admin.site.register(PatientCard, PatientCardAdmin)
+admin.site.register(Order)
+admin.site.register(DayofWeek)
+admin.site.register(WorkingTime)
 
-class DoctorsEmploymentAdmin(admin.ModelAdmin):
-    list_display = ('doctor_id', 'dates_of_records', 'admission_start_time')
-admin.site.register(DoctorsEmployment, DoctorsEmploymentAdmin)
+class DoctorsScheduleAdmin(admin.ModelAdmin):
+    list_display = ('doctor', 'day_of_week', 'working_time')
+admin.site.register(DoctorsSchedule, DoctorsScheduleAdmin)

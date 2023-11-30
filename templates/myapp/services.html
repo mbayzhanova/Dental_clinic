@@ -7,49 +7,15 @@
     <div class="container">
         <span class="span-header"><a href="{% url 'order' %}" class="a-header-link">Заказать услугу онлайн</a></span>
         <div class="service-list1">
+            {% for service in services %}
             <div class="service-item">
-                <img src="/static/img/service_img/tooth-filling.png" alt="Plomba">
-                <h2 class="service-item__name">Пломба</h2>
-                <p class="service-item__price">15000 тг</p>
+                <a href="/services/{{ service.id }}">
+                    <img src='{{ service.img.url }}' alt="Plomba">
+                    <h2 class="service-item__name">{{ service.name }}</h2>
+                    <p class="service-item__price">{{ service.price }} </p>
+                </a>
             </div>
-            <div class="service-item">
-                <img src="/static/img/service_img/tooth.png" alt="">
-                <h2 class="service-item__name">Коронка</h2>
-                <p class="service-item__price">35000 тг</p>
-            </div>
-            <div class="service-item">
-                <img src="/static/img/service_img/implant.png" alt="">
-                <h2 class="service-item__name">Имплантация</h2>
-                <p class="service-item__price">150000 тг</p>
-            </div>
-            <div class="service-item">
-                <img src="/static/img/service_img/tooth (1).png" alt="">
-                <h2 class="service-item__name">Чистка</h2>
-                <p class="service-item__price">10000 tg</p>
-            </div>
-        </div>
-
-        <div class="service-list2">
-            <div class="service-item">
-                <img src="/static/img/service_img/tooth-filling.png" alt="Plomba">
-                <h2 class="service-item__name">Детская <br>стоматология</h2>
-                <p class="service-item__price">20000 тг</p>
-            </div>
-            <div class="service-item">
-                <img src="/static/img/service_img/tooth.png" alt="">
-                <h2 class="service-item__name">Рентген</h2>
-                <p class="service-item__price">35000 тг</p>
-            </div>
-            <div class="service-item">
-                <img src="/static/img/service_img/implant.png" alt="">
-                <h2 class="service-item__name">Ортопедия</h2>
-                <p class="service-item__price">150000 тг</p>
-            </div>
-            <div class="service-item">
-                <img src="/static/img/service_img/tooth (1).png" alt="">
-                <h2 class="service-item__name">Диагностика</h2>
-                <p class="service-item__price">10000 tg</p>
-            </div>
+            {% endfor %}
         </div>        
     </div>
 </header>

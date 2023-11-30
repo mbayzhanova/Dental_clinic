@@ -7,27 +7,27 @@ from account import forms
 
 
 def login(request):
-    form = forms.CustomLoginForm()
+    form=forms.CustomLoginForm()
+    msg = []
     if request.method == 'POST':
-        form = forms.CustomLoginForm(request = request,data=request.POST)
+        form=forms.CustomLoginForm(data=request.POST)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(request, username=username, password=password)
-            print("jnnkjnj")
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
+            user = authenticate(username=username, password=password)
             if user is not None:
-                login(request, user)
-                return redirect('/')
+                auth.login(request, user)
+                msg.append("login successful")
+                return redirect('index')
             else:
-                print('form', user)
-        else:
-            print('form_in_valid', form)
-    return render(request, 'account/login.html', { 'form': form})
-
+                msg.append("invalid login")
+    return render(request, 'account/login.html', context={
+        'form': form
+    })
 
 def my_logout(request):
     logout(request)
-    return redirect('home')
+    return redirect('login')
 
 
 def register(request):

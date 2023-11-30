@@ -1,11 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 
 
 class CustomUserManager(BaseUserManager):
-    def create_user(self, username, email, first_name, last_name, phone_number, date_of_birth, password=None):
-        if not email:
-            raise ValueError("Пользователи должны иметь email адрес")
+    def create_user(self, username, email=None, first_name=None, last_name=None, phone_number=None, date_of_birth=None, password=None):
+        # if not email:
+        #     raise ValueError("Пользователи должны иметь email адрес")
 
         user = self.model(
             username=username,
@@ -22,8 +22,13 @@ class CustomUserManager(BaseUserManager):
 
     def create_superuser(self, username, password=None):
         user = self.create_user(
-            username,
+            username=username,
             password=password,
+            email='bayzhanovaaa@inbox.ru',
+            first_name='Moldir',
+            last_name='Baizhanova',
+            phone_number='+77714915099',
+            date_of_birth='2011-11-11'
         )
 
         user.is_admin = True
@@ -32,7 +37,7 @@ class CustomUserManager(BaseUserManager):
         return user
 
 
-class CustomUser(AbstractBaseUser):
+class CustomUser(PermissionsMixin, AbstractBaseUser):
     username = models.CharField("Логин пользователя", max_length=255, unique=True)
 
     email = models.EmailField(

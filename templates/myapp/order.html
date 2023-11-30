@@ -4,6 +4,9 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="/static/css/main.css">
 <div class="container">
+    {% if form %}
+        {{form.errors}}
+    {% endif %}
     <form method="POST" action="/myapp/order">
         {% csrf_token %}
         <div class="order-form">
@@ -11,8 +14,7 @@
             <div class="order-form-holder">
                 <input class="order_input" type="text" name="first_name" placeholder="Имя">
                 <input class="order_input" type="text" name="last_name" placeholder="Фамилия">
-                <input class="order_input" type="text" name="phone_number" placeholder="Телефон">
-
+                
                 <input class="order_btn" type="submit" value="Записаться">
             </div>
         </div>

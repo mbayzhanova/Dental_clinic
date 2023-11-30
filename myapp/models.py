@@ -1,35 +1,34 @@
 from django.db import models
 import uuid
-
-class Patient(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=30, unique=True, default="")
-    gender = models.CharField(max_length=6, unique=True)
-    phone_number = models.CharField(max_length=20, unique=True)
-
-class Doctor(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=30, unique=True, default="")
-
-class Registry(models.Model):
-    doctor_id = models.ForeignKey(Doctor, on_delete=models.CASCADE)
-    patient_id = models.ForeignKey(Patient, on_delete=models.CASCADE)
+from account import models as account_models
 
 class Diagnose(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=20, unique=True, default="")
 
 class Service(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=30, unique=True, default="")
+    name = models.CharField(max_length=30, default="")
+    img = models.ImageField(upload_to='services')
+    price = models.CharField(max_length=50, default="")
+    description = models.CharField(max_length=250, default="")
+    doctor = models.ForeignKey(account_models.CustomUser, on_delete=models.CASCADE, null=True)
 
-class PatientCard(models.Model):
-    doctor_id = models.ForeignKey(Doctor, on_delete=models.CASCADE)
-    patient_id = models.ForeignKey(Patient, on_delete=models.CASCADE)
-    number_of_record = models.IntegerField(unique=True)
-    dates_of_record = models.DateField(unique=True)
+class Order(models.Model):
+    patient = models.ForeignKey(account_models.CustomUser, related_name='patient_id', on_delete=models.CASCADE)
+    doctor = models.ForeignKey(account_models.CustomUser, related_name='doctor_id', on_delete=models.CASCADE)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    order_time = models.DateTimeField()
 
-class DoctorsEmployment(models.Model):
-    doctor_id = models.ForeignKey(Doctor, on_delete=models.CASCADE)
-    dates_of_records = models.ForeignKey(PatientCard, on_delete=models.CASCADE)
-    admission_start_time = models.TimeField(unique=True)
+class DayofWeek(models.Model):
+    name = models.CharField(max_length=200)
+    def __str__(self) -> str:
+        return self.name
+
+class WorkingTime(models.Model):
+    name = models.CharField('Часы работы')
+    def __str__(self) -> str:
+        return self.name
+
+class DoctorsSchedule(models.Model):
+    doctor = models.ForeignKey(account_models.CustomUser, on_delete=models.CASCADE)
+    day_of_week = models.ForeignKey(DayofWeek, on_delete=models.CASCADE)
+    working_time = models.ForeignKey(WorkingTime, on_delete=models.CASCADE)
