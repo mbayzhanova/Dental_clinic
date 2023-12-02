@@ -3,35 +3,36 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="/static/css/service.css">
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
 <div class="container">
-    <div class="post-content">
-        <div class="book-img-content">
-                <div class="book-img"><img src="{{ service.img.url }}"> </div>
+    <div class="serviceInfoContent">
+        <div class="serviceImgContent">
+                <div class="serviceImg"><img src="{{ service.img.url }}"></div>
         </div>
-        <div class="info-content">
-                <div class="bookname">
+        <div class="serviceInfo">
+                <div class="serviceName">
                     <br><h2>{{ service.name }}</h2>
                 </div>
-                <div class="info">
+                <div class="servicePrice">
                     Цена: {{ service.price }}тг
                 </div>
+                <div class="serviceDescription"><p>{{ service.description|linebreaks }}</p></div>
         </div>
     </div>
-        <div class="description"><p>{{ service.description|linebreaks }} </div>
-            <select name="doctor" id="doctorSelect">
-                <option selected disabled>
-                    Выберите врача
-                </option>
-                {% for doctor in doctors %}
-                    <option value="{{ doctor.id }}">{{doctor.first_name}} {{doctor.last_name}}</option>
-                {% endfor %}
-            </select>
-            <select name="schedules" id="schedulesSelect">
-                
-            </select>
-            
-            <span class=""><button type="submit">Записаться</button></span>
+    <div class="formContent">
+        <select name="doctor" id="doctorSelect">
+            <option selected disabled>
+                Выберите врача
+            </option>
+            {% for doctor in doctors %}
+                <option value="{{ doctor.id }}">{{doctor.first_name}} {{doctor.last_name}}</option>
+            {% endfor %}
+        </select>
+        <select name="schedules" id="schedulesSelect"></select>
+        <span class="orderSumbit"><button type="submit">Записаться</button></span>
+    </div>
 </div>
+
 <script src="/static/js/schedule.js"></script>
 
 {% endblock %}

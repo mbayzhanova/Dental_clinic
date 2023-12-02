@@ -32,5 +32,10 @@ function init() {
     });
 }
 
+function scrollToSection3() {
+    var section  = document.getElementById('section3');
+    section.scrollIntoView({ behavior: 'smooth'});
+}
+
 
 ymaps.ready(init);

@@ -1,51 +1,41 @@
-.container{
-    max-width: 1230px;
-}
-
-.book-img-content{
-    margin:20px;
-}
-
-.book-img{
-    width:250px;
-}
-
-.info-content{
-    font-weight:100px;
-}
-
-.bookname{
-     font-size:20px;
-    margin-bottom:20px;
-}
-
-.info{
-    font-size:20px;
-    margin-bottom:15px;
-}
-.description{
-    margin-left:20px;
-     margin-right:40px;
-
-}
-.post_btn{
-    margin: 10px 40px 40px 20px;
-    display: inline-block;
+.serviceInfoContent {
+    display: flex;
+    flex-direction: row;
+    text-align:inherit;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #000;
     font-size: 20px;
-    color:white;
-    background:#664229;
-    cursor: pointer;
+}
+
+.serviceImg {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.serviceName {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.servicePrice {
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.serviceImgContent {
+    margin: 20px;
+}
+
+.formContent {
+    text-align: end;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.orderSumbit {
+    border-radius: 35px;
+    border: 1.50px rgba(0, 0, 0, 0.90) solid;
     padding: 10px;
-    text-align: right;
-}
-.container{
-    max-width:1200px ;
-}
-.post_btn:hover{
-    letter-spacing: .2rem;
-    color: black;
-}
-.post-content{
-    display:grid;
-    grid-template-columns: 0.7fr 2fr;
 }
