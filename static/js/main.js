@@ -37,5 +37,4 @@ function scrollToSection3() {
     section.scrollIntoView({ behavior: 'smooth'});
 }
 
-
 ymaps.ready(init);
