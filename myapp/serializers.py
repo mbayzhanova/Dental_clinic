@@ -4,20 +4,17 @@ from account import models as account_models
 
 
 class DayOfWeekSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = models.DayofWeek
         fields = '__all__'
 
 
 class WorkingTimeSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = models.WorkingTime
         fields = '__all__'
 
 class DoctorSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = account_models.CustomUser
         fields = '__all__'

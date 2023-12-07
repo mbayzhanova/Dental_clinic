@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Diagnose, Service, DoctorsSchedule, Order, DayofWeek, WorkingTime
-
-admin.site.register(Diagnose)
+from .models import Service, DoctorsSchedule, Order, DayofWeek, WorkingTime
 
 class ServicesAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'description', 'img', 'doctor')
