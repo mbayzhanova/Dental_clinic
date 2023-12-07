@@ -1,6 +1,6 @@
 // Sale 
 document.addEventListener('DOMContentLoaded', () => {
-    const sale = new Date('Dec 1 2023 00:00:00');
+    const sale = new Date('Dec 20 2023 00:00:00');
 
     const Days = document.getElementById("days");
     const Hours = document.getElementById("hours");
@@ -34,6 +34,11 @@ function init() {
 
 function scrollToSection3() {
     var section  = document.getElementById('section3');
+    section.scrollIntoView({ behavior: 'smooth'});
+}
+
+function scrollToSection4() {
+    var section  = document.getElementById('section4');
     section.scrollIntoView({ behavior: 'smooth'});
 }
 

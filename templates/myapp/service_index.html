@@ -20,16 +20,8 @@
         </div>
     </div>
     <div class="formContent">
-        <select name="doctor" id="doctorSelect">
-            <option selected disabled>
-                Выберите врача
-            </option>
-            {% for doctor in doctors %}
-                <option value="{{ doctor.id }}">{{doctor.first_name}} {{doctor.last_name}}</option>
-            {% endfor %}
-        </select>
         <select name="schedules" id="schedulesSelect"></select>
-        <span class="orderSumbit"><button type="submit">Записаться</button></span>
+        <span class="orderSumbit"><a href="/order/{{ service_id }}" type="submit">Записаться</button></span>
     </div>
 </div>
 

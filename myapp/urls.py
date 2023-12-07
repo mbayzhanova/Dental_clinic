@@ -8,9 +8,10 @@ urlpatterns =[
     path('', views.index, name="index"),
     path('services', views.services, name="services"),
     path('about_us', views.about_us, name="about_us"),
-    path('order', views.order, name="order"),
+    path('order/<int:service_id>', views.order, name="order"),
     path('services/<int:id>', views.services_show, name="service_index"),
-    path('doctors/<int:id>', views.doctor_schedule)
+    path('doctors/<int:id>', views.doctor_schedule),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

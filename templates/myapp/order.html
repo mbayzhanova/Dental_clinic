@@ -4,20 +4,54 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="/static/css/main.css">
 <div class="container">
-    {% if form %}
-        {{form.errors}}
+    {% if error %}
+        {{error}}
     {% endif %}
-    <form method="POST" action="/myapp/order">
+
+    <form method="POST" action="/order/{{service_id}}">
         {% csrf_token %}
         <div class="order-form">
             <h2 class="order-form__title">Заказать услугу</h2>
             <div class="order-form-holder">
-                <input class="order_input" type="text" name="first_name" placeholder="Имя">
-                <input class="order_input" type="text" name="last_name" placeholder="Фамилия">
-                
+                <select name="doctor" id="doctorSelect">
+                    <option selected disabled>
+                        Выберите врача
+                    </option>
+                    {% for doctor in doctors %}
+                        <option value="{{ doctor.id }}">{{doctor.first_name}} {{doctor.last_name}}</option>
+                    {% endfor %}
+                </select>
+
+                <div class="" id="worktime">
+                </div>
+
+                <input type="date" id="datepicker" placeholder="Выберите дату и время">
+
+                <div class="work2">
+                    <select name="" id="timeSelect">
+                        <option value="9:00">9:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                    </select>
+                </div>
+
+                <input type="hidden" id="orderTime" value="" name="order_time">
+
+                <input type="hidden" id="serviceSelect" value="{{service_id}}" name="service">
+
+            
                 <input class="order_btn" type="submit" value="Записаться">
             </div>
         </div>
     </form>
 </div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/static/js/schedule.js"></script>
+
 {% endblock %}

@@ -12,6 +12,9 @@ class Service(models.Model):
     description = models.CharField(max_length=250, default="")
     doctor = models.ForeignKey(account_models.CustomUser, on_delete=models.CASCADE, null=True)
 
+    def __str__(self) -> str:
+        return self.name
+
 class Order(models.Model):
     patient = models.ForeignKey(account_models.CustomUser, related_name='patient_id', on_delete=models.CASCADE)
     doctor = models.ForeignKey(account_models.CustomUser, related_name='doctor_id', on_delete=models.CASCADE)
