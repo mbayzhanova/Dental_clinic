@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-08T19:42:03.380Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="ia7wgyvlN-kY1BK-NyQX" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-09T18:00:39.116Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="xIeOH9vKKhRbeMms1EQx" version="22.1.7" type="github">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
     <mxGraphModel dx="1042" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -27,35 +27,56 @@
         <mxCell id="I2xPk848-iBVpUdjFjL7-4" value="Patient" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="100" y="150" width="40" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-3" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-3" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="150" y="440" width="40" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-6" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="650" y="280" width="40" height="80" as="geometry" />
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-6" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="640" y="240" width="40" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-7" value="Сайтқа тіркеледі" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-7" value="Жүйеде тіркеледі" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="50" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-8" value="Қабылдауға жазылады" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-8" value="Қабылдауға жазылады" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="120" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-9" value="Дәрігерлер туралы ақпарат алады" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-9" value="Дәрігерлер туралы ақпарат алады" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="190" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-10" value="Қызметтер мен бағалар көре алады" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-10" value="Қызметтер мен бағаларды көре алады" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="270" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-11" value="Акциялар туралы хабардар болады" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-11" value="Акциялар туралы хабардар болады" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="340" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-12" value="Қабылдау кестесін басқарады" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-12" value="Қабылдау кестесін басқарады" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="460" y="180" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-13" value="Пациент туралы ақпарат қарайды" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="280" width="120" height="50" as="geometry" />
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-13" value="Пациент туралы ақпарат қарайды" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="455" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-14" value="Дәрігер туралы ақпарат алады" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="360" width="120" height="50" as="geometry" />
+        <mxCell id="4dcu9pCcwlt_-ZrJ1Azf-14" value="Қолданушылар тізімін басқарады" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="460" y="270" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="H_IOPxshejVYue-gagEJ-1" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4dcu9pCcwlt_-ZrJ1Azf-13" target="4dcu9pCcwlt_-ZrJ1Azf-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="360" as="sourcePoint" />
+            <mxPoint x="450" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H_IOPxshejVYue-gagEJ-2" value="Пациент сұранысын қабылдайды" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="540" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="H_IOPxshejVYue-gagEJ-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.545;exitY=0.59;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="I2xPk848-iBVpUdjFjL7-4" target="4dcu9pCcwlt_-ZrJ1Azf-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="350" as="sourcePoint" />
+            <mxPoint x="430" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H_IOPxshejVYue-gagEJ-4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="I2xPk848-iBVpUdjFjL7-4" target="4dcu9pCcwlt_-ZrJ1Azf-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="350" as="sourcePoint" />
+            <mxPoint x="430" y="300" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
